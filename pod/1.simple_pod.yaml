@@ -1,0 +1,17 @@
+# kubectl apply -f simple_pod.yaml
+# kubectl describe pod my-simple-pod
+# kubectl delete pod my-simple-pod
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-simple-pod
+  labels:
+    app: my-simple-app
+spec:
+  containers:
+  - name: my-simple-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+
